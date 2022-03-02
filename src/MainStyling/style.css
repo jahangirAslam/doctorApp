@@ -1,5 +1,5 @@
 .patientFormHeading h1 {
-    color: blue;
+    color: black;
     text-align: center;
     padding: 6px;
     font-style: italic;
@@ -10,6 +10,7 @@
 .patientForm {
     margin: 6px;
     background: white;
+    padding-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -25,4 +26,13 @@ label {
 
 .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
     width: 100% !important;
+}
+
+.xyz button {
+    background: green;
+    color: wheat;
+    height: 50px;
+    width: 42%;
+    margin: 26px;
+    border-radius: 10px;
 }

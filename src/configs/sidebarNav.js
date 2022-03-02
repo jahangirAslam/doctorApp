@@ -12,10 +12,10 @@ const sidebarNav = [
         text: 'Add Patient'
     },
     {
-        link: '/products',
-        section: 'products',
+        link: '/doctor',
+        section: 'doctor',
         icon: <i className='bx bx-cube'></i>,
-        text: 'Products'
+        text: 'Add Doctor'
     },
     {
         link: '/customers',

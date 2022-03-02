@@ -14,7 +14,7 @@ function App() {
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<Dashboard />} />
                     <Route path="patient" element={<AddPatient />} />
-                    <Route path="products" element={<Blank />} />
+                    <Route path="doctor" element={<Blank />} />
                     <Route path="customers" element={<Blank />} />
                     <Route path="settings" element={<Blank />} />
                     <Route path="stats" element={<Blank />} />
