@@ -1,0 +1,28 @@
+.patientFormHeading h1 {
+    color: blue;
+    text-align: center;
+    padding: 6px;
+    font-style: italic;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.patientForm {
+    margin: 6px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.formEntries {
+    padding: 15px;
+    width: 80px !important;
+}
+
+label {
+    font-size: 20px !important;
+    font-weight: 400!important;
+}
+
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    width: 100% !important;
+}

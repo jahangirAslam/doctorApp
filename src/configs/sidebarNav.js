@@ -6,10 +6,10 @@ const sidebarNav = [
         text: 'Home'
     },
     {
-        link: '/orders',
-        section: 'orders',
+        link: '/patient',
+        section: 'patient',
         icon: <i className='bx bx-receipt' ></i>,
-        text: 'Orders'
+        text: 'Add Patient'
     },
     {
         link: '/products',
