@@ -4,9 +4,13 @@ import { Link, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
 
-const Sidebar = () => {
+const Sidebar = ({isUserFun}) => {
+    // isUserFun()
+
     const [activeIndex, setActiveIndex] = useState(0)
     const location = useLocation()
+
+
 
     useEffect(() => {
         const curPath = window.location.pathname.split('/')[1]
@@ -14,6 +18,12 @@ const Sidebar = () => {
 
         setActiveIndex(curPath.length === 0 ? 0 : activeItem)
     }, [location])
+
+
+  const logout = () =>{
+    isUserFun("logout")
+  }
+
 
     const closeSidebar = () => {
         document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)'
@@ -24,7 +34,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className='sidebar'>
+        <div className='sidebar' style={{background: "dodgerblue"}}>
             <div className="sidebar__logo">
                 <img src={images.logo} alt="" />
                 <div className="sidebar-close" onClick={closeSidebar}>
@@ -44,11 +54,11 @@ const Sidebar = () => {
                         </Link>
                     ))
                 }
-                <div className="sidebar__menu__item">
-                    <div className="sidebar__menu__item__icon">
+            <div className="sidebar_menu_item">
+                    <div className="sidebar_menuitem_icon">
                         <i className='bx bx-log-out'></i>
                     </div>
-                    <div className="sidebar__menu__item__txt">
+                    <div onClick={logout}  className="sidebar_menuitem_txt">
                         Logout
                     </div>
                 </div>

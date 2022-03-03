@@ -47,7 +47,7 @@ const AddType = () => {
 
             >
                 <Grid item lg={12} className="patientFormHeading">
-                    <Typography style={{ color: "blue", padding: "10px" }} variant='h4' align='left' >Add Type</Typography>
+                    <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >Add Type</Typography>
                 </Grid>
 
 
@@ -73,20 +73,21 @@ const AddType = () => {
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label=" Price" variant="outlined" />
                     </Grid>
-                  
-                    
-                </Grid> 
-              
-                <Grid
+                    <Grid
                     container
                     direction="row"
                     justifyContent="center"
                     alignItems="center"
                     item xs={12} 
-                    className="xyz"
+                    className="Submitbtn "
                       > 
                     <Button>Submit</Button> 
                     </Grid>
+                  
+                    
+                </Grid> 
+              
+               
             </Grid>
         </div>
     )

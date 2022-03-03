@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
-
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 const currencies = [
     {
@@ -31,6 +33,8 @@ const currencies = [
 
 ];
 
+
+
 const AddDoctor = () => {
     const [currency, setCurrency] = React.useState('EUR');
 
@@ -47,7 +51,7 @@ const AddDoctor = () => {
 
             >
                 <Grid item lg={12} className="patientFormHeading">
-                    <Typography style={{ color: "blue", padding: "10px" }} variant='h4' align='left' >Add New Doctor</Typography>
+                    <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >Add New Doctor</Typography>
                 </Grid>
 
 
@@ -99,21 +103,64 @@ const AddDoctor = () => {
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Experience" variant="outlined" />
                     </Grid>
-                    <Grid item lg={12} className="formEntries">
+                    <Grid item lg={6} className="formEntries">
+                        <h4> Doctor available days </h4>
+                        <FormGroup className='checkboxes'>
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Sun" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Mon" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Tues" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Wed" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Thurs" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Fri" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Satur" />
+
+                        </FormGroup>
+                    </Grid>
+                    <Grid item lg={6} className="formEntries">
                         <input type="file" ></input>
                     </Grid>
-                </Grid> 
-              
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="flex-start"
+                    >
+                        <Grid item lg={6}>
+                            <h5 className='timeheader'>From</h5>
+                            <input type="time" className='timeInputs'></input>
+                        </Grid>
+                        <Grid item lg={6} >
+                            <h5 className='timeheader'>To</h5>
+                            <input type="time"  className='timeInputs' ></input>
+                        </Grid>
+                    </Grid>
+
+                    <Grid
+                    container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center"
+                    item lg={12}
+                    className="Submitbtn"
+                >
+                    <Button>Add Time</Button>
+                </Grid>
                 <Grid
                     container
                     direction="row"
                     justifyContent="center"
                     alignItems="center"
-                    item xs={12} 
-                    className="xyz"
-                      > 
-                    <Button>Submit</Button> 
-                    </Grid>
+                    item xs={12}
+                    className="Submitbtn"
+                >
+                    <Button>Add Doctor</Button>
+                </Grid>
+                    
+                    
+
+
+                </Grid>
+
+               
             </Grid>
         </div>
     )
