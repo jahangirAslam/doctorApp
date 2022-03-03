@@ -1,5 +1,4 @@
 body {
-    background: linear-gradient(to left, rgb(111, 120, 204), white);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,11 +6,19 @@ body {
 }
 
 .container {
+    background-color: dodgerblue;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     width: 100%;
+}
+
+.body-form h1 {
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    padding: 6px;
 }
 
 .form-box {
@@ -26,14 +33,40 @@ body {
     border-radius: 2%;
 }
 
-.header-form {
-    margin-bottom: 15px;
+.form-control {
+    margin: 6px!important;
 }
 
-button {
+.header-form {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.loginbtn Button {
+    margin-top: 6px;
+    background-color: blue;
+    width: 200px;
+    border-radius: 20px;
+    padding: 8px;
+    color: white;
+    font-weight: 900;
+}
+
+img {
+    width: 100px;
+    height: 63px;
+    position: relative;
+    left: 104px;
+    top: 10px;
+    border-radius: 15px;
+}
+
+
+/* button {
     margin-top: 40px;
     margin-bottom: 10px;
-}
+} */
 
 .message {
     display: flex;

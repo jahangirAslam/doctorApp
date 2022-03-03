@@ -112,7 +112,7 @@ const AddDoctor = () => {
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Wed" />
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Thurs" />
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Fri" />
-                            <FormControlLabel control={<Checkbox defaultChecked />} label="Satur" />
+                            <FormControlLabel control={<Checkbox defaultChecked />} label="Sat" />
 
                         </FormGroup>
                     </Grid>
@@ -134,7 +134,7 @@ const AddDoctor = () => {
                         </Grid>
                     </Grid>
 
-                    <Grid
+                    {/* <Grid
                     container
                     direction="row"
                     justifyContent="center"
@@ -143,7 +143,7 @@ const AddDoctor = () => {
                     className="Submitbtn"
                 >
                     <Button>Add Time</Button>
-                </Grid>
+                </Grid> */}
                 <Grid
                     container
                     direction="row"

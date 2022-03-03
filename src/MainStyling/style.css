@@ -2,7 +2,7 @@
     color: black;
     text-align: center;
     padding: 6px;
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 900;
     cursor: pointer;
     background: dodgerblue
@@ -12,7 +12,7 @@
     color: black;
     text-align: start;
     padding: 6px;
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: 900;
     cursor: pointer;
 }
@@ -54,12 +54,14 @@ label {
 
 .checkboxes {
     display: inline !important;
+    color: black;
 }
 
 .timeheader {
     font-size: 21px;
     font-weight: 600;
     padding-left: 10px;
+    color: black;
 }
 
 .timeInputs {
