@@ -55,16 +55,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </DashboardWrapperMain>
-            <DashboardWrapperRight>
-                <div className="title mb">Overall</div>
-                <div className="mb">
-                    <OverallList />
-                </div>
-                <div className="title mb">Revenue by channel</div>
-                <div className="mb">
-                    <RevenueList />
-                </div>
-            </DashboardWrapperRight>
+         
         </DashboardWrapper>
     )
 }
@@ -116,13 +107,8 @@ const RevenueByMonthsChart = () => {
         ]
     }
     return (
-        <>
-            <div className="title mb">
-                Revenue by months
-            </div>
-            <div>
-                <Bar options={chartOptions} data={chartData} height={`300px`} />
-            </div>
-        </>
+    <div>
+        
+    </div>
     )
 }

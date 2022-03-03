@@ -5,42 +5,40 @@ const data = {
         name: 'Tuatta',
         img: images.avt
     },
-    summary: [
-        {
-            title: 'Sales',
+    summary: [{
+            title: 'Doctors',
             subtitle: 'Total sales today',
             value: '$1.000',
             percent: 70
         },
         {
-            title: 'Orders',
+            title: 'Patients',
             subtitle: 'Total orders today',
             value: '3000',
             percent: 49
         },
         {
-            title: 'Revenue',
+            title: 'Weekly',
             subtitle: 'Total revenue today',
             value: '$678',
             percent: 38
         },
         {
-            title: 'Visits',
+            title: 'Monthly',
             subtitle: 'Total visits today',
             value: '2345',
             percent: 55
         }
     ],
     revenueSummary: {
-        title: 'Revenue',
+        title: 'Yearly',
         value: '$678',
         chartData: {
             labels: ['May', 'Jun', 'July', 'Aug', 'May', 'Jun', 'July', 'Aug'],
             data: [300, 300, 280, 380, 200, 300, 280, 350]
         }
     },
-    overall: [
-        {
+    overall: [{
             value: '300K',
             title: 'Orders'
         },
@@ -57,8 +55,7 @@ const data = {
             title: 'Revenue'
         }
     ],
-    revenueByChannel: [
-        {
+    revenueByChannel: [{
             title: 'Direct',
             value: 70
         },
