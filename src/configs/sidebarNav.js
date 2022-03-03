@@ -30,10 +30,10 @@ const sidebarNav = [
         text: 'Patient Entry'
     },
     {
-        link: '/report',
-        section: 'report',
+        link: '/Doctors',
+        section: 'Doctors',
         icon: <i className='bx bx-cog'></i>,
-        text: 'Report'
+        text: 'Doctors'
     }
 ]
 
