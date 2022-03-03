@@ -1,57 +1,211 @@
-import React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import React from 'react'
+import { Autocomplete, Button, Grid, MenuItem, Typography } from '@mui/material'
+import Checkbox from '@mui/material/Checkbox';
+import TextField from '@mui/material/TextField';
 
-const columns = [
-  { field: 'id', headerName: 'ID', width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
+
+const top10Films = [
+  { title: 'The Shawshank Redemption', year: 1994 },
+  { title: 'The Godfather', year: 1972 },
+  { title: 'The Godfather: Part II', year: 1974 },
+  { title: 'The Dark Knight', year: 2008 },
+  { title: '12 Angry Men', year: 1957 },
+  { title: "Schindler's List", year: 1993 },
+  { title: 'Pulp Fiction', year: 1994 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
-    width: 90,
+    title: 'The Lord of the Rings: The Return of the King',
+    year: 2003,
+  },
+  { title: 'The Good, the Bad and the Ugly', year: 1966 },
+  { title: 'Fight Club', year: 1999 },
+  {
+    title: 'The Lord of the Rings: The Fellowship of the Ring',
+    year: 2001,
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    title: 'Star Wars: Episode V - The Empire Strikes Back',
+    year: 1980,
   },
+  { title: 'Forrest Gump', year: 1994 },
+  { title: 'Inception', year: 2010 },
+  {
+    title: 'The Lord of the Rings: The Two Towers',
+    year: 2002,
+  },
+  { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
+  { title: 'Goodfellas', year: 1990 },
+  { title: 'The Matrix', year: 1999 },
+  { title: 'Seven Samurai', year: 1954 },
+  {
+    title: 'Star Wars: Episode IV - A New Hope',
+    year: 1977,
+  },
+  { title: 'City of God', year: 2002 },
+  { title: 'Se7en', year: 1995 },
+  { title: 'The Silence of the Lambs', year: 1991 },
+  { title: "It's a Wonderful Life", year: 1946 },
+  { title: 'Life Is Beautiful', year: 1997 },
+  { title: 'The Usual Suspects', year: 1995 },
+  { title: 'Léon: The Professional', year: 1994 },
+  { title: 'Spirited Away', year: 2001 },
+  { title: 'Saving Private Ryan', year: 1998 },
+  { title: 'Once Upon a Time in the West', year: 1968 },
+  { title: 'American History X', year: 1998 },
+  { title: 'Interstellar', year: 2014 },
 ];
 
-const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+
+
+const top100Films = [{ label: 'Reservoir Dogs', year: 1992 },
+{ label: 'Braveheart', year: 1995 },
+{ label: 'M', year: 1931 },
+{ label: 'Requiem for a Dream', year: 2000 },
+{ label: 'Amélie', year: 2001 },
+{ label: 'A Clockwork Orange', year: 1971 },
+{ label: 'Like Stars on Earth', year: 2007 },
+{ label: 'Taxi Driver', year: 1976 },
+{ label: 'Lawrence of Arabia', year: 1962 },
+{ label: 'Double Indemnity', year: 1944 },
+{
+  label: 'Eternal Sunshine of the Spotless Mind',
+  year: 2004,
+},
+{ label: 'Amadeus', year: 1984 },
+{ label: 'To Kill a Mockingbird', year: 1962 },
+{ label: 'Toy Story 3', year: 2010 },
+{ label: 'Logan', year: 2017 },
+{ label: 'Full Metal Jacket', year: 1987 },
+{ label: 'Dangal', year: 2016 },
+{ label: 'The Sting', year: 1973 },
+{ label: '2001: A Space Odyssey', year: 1968 },
+{ label: "Singin' in the Rain", year: 1952 },
+{ label: 'Toy Story', year: 1995 },
+{ label: 'Bicycle Thieves', year: 1948 },
+{ label: 'The Kid', year: 1921 },
+{ label: 'Inglourious Basterds', year: 2009 },
+{ label: 'Snatch', year: 2000 },
+{ label: '3 Idiots', year: 2009 },
+{ label: 'Monty Python and the Holy Grail', year: 1975 },
+]
 
 const Patients = () => {
-  return (
-    
-    <div style={{ height: 400, width: '100%' }}>
-      <div className='patientHeading'>
-        <h1>Patient</h1>
+  const [currency, setCurrency] = React.useState('EUR');
 
-      </div>
-      <DataGrid
-      className='patientTable'
-         align='center'
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
- 
-      />
+  const handleChange = (event) => {
+    setCurrency(event.target.value);
+  };
+  return (
+    <div>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+
+      >
+        <Grid item lg={12} className="patientFormHeading">
+          <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >CREATE INVOICE</Typography>
+        </Grid>
+
+
+        <Grid item lg={12} md={12}
+          className="patientForm"
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item lg={12} className="patientFormHeading">
+            <h1>Invoice Details</h1>
+          </Grid>
+
+          <Grid item lg={6} className="formEntries">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={top100Films}
+              sx={{ width: "100%" }}
+              renderInput={(params) => <TextField {...params} label="Patient" />}
+            />
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={top100Films}
+              sx={{ width: "100%" }}
+              renderInput={(params) => <TextField {...params} label="Appointment" />}
+            />
+          </Grid>
+
+          <Grid item lg={6} className="formEntries">
+            <TextField id="outlined-basic" label=" Doctor" variant="outlined" />
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={top100Films}
+              sx={{ width: "100%" }}
+              renderInput={(params) => <TextField {...params} label="Payment Mode" />}
+            />
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={top100Films}
+              sx={{ width: "100%" }}
+              renderInput={(params) => <TextField {...params} label="Payment Status" />}
+            />
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+       
+          </Grid>
+
+          <Grid item lg={12} className="patientFormHeading">
+            <h1>Invoice Summary</h1>
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+            <Autocomplete
+              multiple
+              id="checkboxes-tags-demo"
+              options={top10Films}
+              disableCloseOnSelect
+              getOptionLabel={(option) => option.title}
+              renderOption={(props, option, { selected }) => (
+                <li {...props}>
+              
+                  {option.title}
+                </li>
+              )}
+              style={{ width: 500 }}
+              renderInput={(params) => (
+                <TextField {...params} label="Checkboxes" placeholder="Favorites" />
+              )}
+            />
+          </Grid>
+          <Grid item lg={6} className="formEntries">
+       
+       </Grid>
+          <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            item xs={12}
+            className="Submitbtn "
+          >
+            <Button>Submit</Button>
+          </Grid>
+
+
+        </Grid>
+
+
+      </Grid>
     </div>
-  );
+  )
 }
+
 export default Patients;
