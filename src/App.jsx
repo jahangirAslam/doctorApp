@@ -11,22 +11,55 @@ import Doctors from './pages/Doctors'
 import '../src/MainStyling/style.css';
 import Dashboard from './pages/Dashboard'
 import MainLayout from './layout/MainLayout'
+import LoginScreen from './pages/LoginScreen'
+import { useState } from 'react'
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<MainLayout />}>
-                    <Route index element={<Dashboard />} />
-                    <Route path="patient" element={<AddPatient />} />
-                    <Route path="doctor" element={<AddDoctor />} />
-                    <Route path="type" element={<AddType />} />
-                    <Route path="Doctors" element={<Doctors />} />
-                    <Route path="patient-entry" element={<Patients />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    )
+
+    const [isUserValid, setIsUserValid] = useState(false);
+
+    const isUserFun = (check) => {
+        setIsUserValid(true);
+        if(check === "logout"){
+            
+            setIsUserValid(false);
+
+        }
+        
+    }
+
+
+
+
+
+
+
+
+    if (!isUserValid) {
+        return (
+            <div>
+                <LoginScreen isUserFun={isUserFun} />
+            </div>
+        )
+    } else {
+
+
+        return (
+
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<MainLayout isUserFun={isUserFun} />}>
+                        <Route index element={<Dashboard />} />
+                        <Route path="patient" element={<AddPatient />} />
+                        <Route path="doctor" element={<AddDoctor />} />
+                        <Route path="type" element={<AddType />} />
+                        <Route path="Doctors" element={<Doctors />} />
+                        <Route path="patient-entry" element={<Patients />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        )
+    }
 }
 
 export default App
