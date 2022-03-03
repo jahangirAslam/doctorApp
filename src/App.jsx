@@ -1,10 +1,12 @@
 import './assets/libs/boxicons-2.1.1/css/boxicons.min.css'
 import './scss/App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Blank from './pages/Blank'
+import Patients from './pages/Patients'
 import AddPatient from './pages/AddPatient'
 import AddDoctor from './pages/AddDoctor'
 import AddType from './pages/AddType'
+import Doctors from './pages/Doctors'
+
 
 import '../src/MainStyling/style.css';
 import Dashboard from './pages/Dashboard'
@@ -19,8 +21,8 @@ function App() {
                     <Route path="patient" element={<AddPatient />} />
                     <Route path="doctor" element={<AddDoctor />} />
                     <Route path="type" element={<AddType />} />
-                    <Route path="patient-entry" element={<Blank />} />
-                    <Route path="report" element={<Blank />} />
+                    <Route path="Doctors" element={<Doctors />} />
+                    <Route path="patient-entry" element={<Patients />} />
                 </Route>
             </Routes>
         </BrowserRouter>
