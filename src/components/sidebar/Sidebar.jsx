@@ -24,7 +24,7 @@ const Sidebar = () => {
     }
 
     return (
-        <div className='sidebar'>
+        <div className='sidebar' style={{background: "dodgerblue"}}>
             <div className="sidebar__logo">
                 <img src={images.logo} alt="" />
                 <div className="sidebar-close" onClick={closeSidebar}>
@@ -45,12 +45,12 @@ const Sidebar = () => {
                     ))
                 }
                 <div className="sidebar__menu__item">
-                    <div className="sidebar__menu__item__icon">
+                    {/* <div className="sidebar__menu__item__icon">
                         <i className='bx bx-log-out'></i>
-                    </div>
-                    <div className="sidebar__menu__item__txt">
+                    </div> */}
+                    {/* <div className="sidebar__menu__item__txt">
                         Logout
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

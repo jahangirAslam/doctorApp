@@ -47,7 +47,7 @@ const AddPatient = () => {
 
             >
                 <Grid item lg={12} className="patientFormHeading">
-                    <Typography style={{ color: "blue", padding: "10px" }} variant='h4' align='left' >Add New Patient</Typography>
+                    <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >Add New Patient</Typography>
                 </Grid>
 
 

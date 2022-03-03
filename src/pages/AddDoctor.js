@@ -51,7 +51,7 @@ const AddDoctor = () => {
 
             >
                 <Grid item lg={12} className="patientFormHeading">
-                    <Typography style={{ color: "blue", padding: "10px" }} variant='h4' align='left' >Add New Doctor</Typography>
+                    <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >Add New Doctor</Typography>
                 </Grid>
 
 
@@ -124,11 +124,11 @@ const AddDoctor = () => {
                         direction="row"
                         justifyContent="flex-start"
                     >
-                        <Grid item lg={3}>
+                        <Grid item lg={6}>
                             <h5 className='timeheader'>From</h5>
                             <input type="time" className='timeInputs'></input>
                         </Grid>
-                        <Grid item lg={3} >
+                        <Grid item lg={6} >
                             <h5 className='timeheader'>To</h5>
                             <input type="time"  className='timeInputs' ></input>
                         </Grid>

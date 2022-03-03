@@ -1,6 +1,16 @@
-.patientFormHeading h1 {
+.patientFormHeading h4 {
     color: black;
     text-align: center;
+    padding: 6px;
+    font-style: italic;
+    font-weight: 900;
+    cursor: pointer;
+    background: dodgerblue
+}
+
+.patientFormHeading h1 {
+    color: black;
+    text-align: start;
     padding: 6px;
     font-style: italic;
     font-weight: 900;
@@ -29,12 +39,17 @@ label {
 }
 
 .Submitbtn button {
-    background: blue;
+    background: dodgerblue;
     color: wheat;
     height: 50px;
     width: 30%;
     margin: 26px;
     border-radius: 10px;
+}
+
+.Submitbtn button:hover {
+    color: white;
+    background-color: black;
 }
 
 .checkboxes {
@@ -48,8 +63,29 @@ label {
 }
 
 .timeInputs {
-    width: 200px;
+    width: 568px;
     padding-left: 10px;
-    height: 30px;
+    height: 62px;
     margin: 10px;
+}
+
+..main__content {
+    padding-top: 0px !important;
+}
+
+.sidebar__menu__item {
+    color: white;
+    font-weight: 900;
+}
+
+.box-purple {
+    background-color: dodgerblue!important;
+    color: #fff;
+}
+
+.patientHeading h1 {
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    background-color: dodgerblue!important;
 }
