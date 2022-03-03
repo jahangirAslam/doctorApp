@@ -18,22 +18,22 @@ const sidebarNav = [
         text: 'Add Doctor'
     },
     {
-        link: '/customers',
-        section: 'customers',
+        link: '/type',
+        section: 'type',
         icon: <i className='bx bx-user'></i>,
-        text: 'Customers'
+        text: 'Add Type'
     },
     {
-        link: '/stats',
-        section: 'stats',
+        link: '/patient-entry',
+        section: 'patient-entry',
         icon: <i className='bx bx-line-chart'></i>,
-        text: 'Stats'
+        text: 'Patient Entry'
     },
     {
-        link: '/settings',
-        section: 'settings',
+        link: '/report',
+        section: 'report',
         icon: <i className='bx bx-cog'></i>,
-        text: 'Settings'
+        text: 'Report'
     }
 ]
 
