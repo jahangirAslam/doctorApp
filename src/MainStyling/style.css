@@ -20,7 +20,7 @@
 }
 
 label {
-    font-size: 20px !important;
+    font-size: 15px !important;
     font-weight: 400!important;
 }
 
@@ -28,11 +28,28 @@ label {
     width: 100% !important;
 }
 
-.xyz button {
-    background: green;
+.Submitbtn button {
+    background: blue;
     color: wheat;
     height: 50px;
-    width: 42%;
+    width: 30%;
     margin: 26px;
     border-radius: 10px;
+}
+
+.checkboxes {
+    display: inline !important;
+}
+
+.timeheader {
+    font-size: 21px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.timeInputs {
+    width: 200px;
+    padding-left: 10px;
+    height: 30px;
+    margin: 10px;
 }

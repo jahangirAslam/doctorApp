@@ -149,18 +149,19 @@ const AddPatient = () => {
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Allergy" variant="outlined" />
                     </Grid>
-
-                </Grid>
-                <Grid
+                    <Grid
                     container
                     direction="row"
                     justifyContent="center"
                     alignItems="center"
                     item xs={12} 
-                    className="xyz"
+                    className="Submitbtn"
                       > 
-                    <Button>Submit</Button> 
+                    <Button>Add Patient</Button> 
                     </Grid>
+
+                </Grid>
+                
             </Grid>
         </div>
     )
