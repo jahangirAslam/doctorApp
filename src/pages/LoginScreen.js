@@ -57,7 +57,7 @@ const login = () =>{
                             <div className="input-group-prepend">
                                 <span className="input-group-text"><i class="fa fa-lock"></i></span>
                             </div>
-                            <input onChange={getPassword} type="text" className="form-control" placeholder="Password" />
+                            <input onChange={getPassword} type="password" className="form-control" placeholder="Password" />
                         </div>
                         <div className="message">
                         <div><input type="checkbox" /> Remember ME</div>

@@ -54,11 +54,11 @@ const Sidebar = ({isUserFun}) => {
                         </Link>
                     ))
                 }
-            <div className="sidebar_menu_item">
-                    <div className="sidebar_menuitem_icon">
+                   <div className="sidebar_menu_item">
+                    <div className="sidebar__menu__item__icon">
                         <i className='bx bx-log-out'></i>
                     </div>
-                    <div onClick={logout}  className="sidebar_menu_item_txt">
+                    <div onClick={logout}  className="sidebar__menu__item__txt">
                         Logout
                     </div>
                 </div>
