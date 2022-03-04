@@ -3,6 +3,8 @@ import './sidebar.scss'
 import { Link, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
+import logod from '../../assets/images/logod.jpeg'
+
 
 const Sidebar = ({isUserFun}) => {
     // isUserFun()
@@ -36,7 +38,7 @@ const Sidebar = ({isUserFun}) => {
     return (
         <div className='sidebar' style={{background: "dodgerblue"}}>
             <div className="sidebar__logo">
-                <img src={images.logo} alt="" />
+            <img src={logod} alt="img" width="200px" height="100px" />
                 <div className="sidebar-close" onClick={closeSidebar}>
                     <i className='bx bx-x'></i>
                 </div>

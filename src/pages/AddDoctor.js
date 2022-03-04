@@ -37,11 +37,9 @@ const currencies = [
 
 const AddDoctor = () => {
     const [currency, setCurrency] = React.useState('EUR');
-
-    const handleChange = (event) => {
-        setCurrency(event.target.value);
-    };
+        
     return (
+
         <div>
             <Grid
                 container
@@ -74,20 +72,7 @@ const AddDoctor = () => {
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Email" type="number" />
                     </Grid>
-                    {/* <Grid item lg={6} className="formEntries">
-                        {/* <TextField
-                            id="outlined-select-currency"
-                            select
-                            label="Gender"
-                            value={currency}
-                            onChange={handleChange}
-                        >
-                            {currencies.map((option) => (
-                                <MenuItem key={option.value} value={option.value}>
-                                    {option.label}
-                                </MenuItem>
-                            ))}
-                        </TextField>                        </Grid> */}
+                   
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Contact Number " variant="outlined" />
                     </Grid >
@@ -117,7 +102,8 @@ const AddDoctor = () => {
                         </FormGroup>
                     </Grid>
                     <Grid item lg={6} className="formEntries">
-                        <input type="file" ></input>
+                        {/* <input type="file" ></input> */}
+
                     </Grid>
                     <Grid
                         container
@@ -126,43 +112,34 @@ const AddDoctor = () => {
                     >
                         <Grid item lg={6}>
                             <h5 className='timeheader'>From</h5>
-                            <input type="time" className='timeInputs'></input>
+                            
                         </Grid>
                         <Grid item lg={6} >
                             <h5 className='timeheader'>To</h5>
-                            <input type="time"  className='timeInputs' ></input>
+                            <input type="time" className='timeInputs' ></input>
                         </Grid>
                     </Grid>
 
-                    {/* <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    item lg={12}
-                    className="Submitbtn"
-                >
-                    <Button>Add Time</Button>
-                </Grid> */}
-                <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    item xs={12}
-                    className="Submitbtn"
-                >
-                    <Button>Add Doctor</Button>
-                </Grid>
-                    
-                    
+                    <Grid
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        item xs={12}
+                        className="Submitbtn"
+                    >
+                        <Button>Add Doctor</Button>
+                    </Grid>
+
+
 
 
                 </Grid>
 
-               
+
             </Grid>
         </div>
+
     )
 }
 

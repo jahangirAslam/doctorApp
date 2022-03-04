@@ -9,6 +9,7 @@
 }
 
 .patientFormHeading h1 {
+    font-size: 20px!important;
     color: black;
     text-align: start;
     padding: 6px;
@@ -90,4 +91,20 @@ label {
     text-align: center;
     color: white;
     background-color: dodgerblue!important;
+}
+
+.sidebar__logo img {
+    position: relative;
+    left: -8px;
+    margin: 15px;
+    width: 150px!important;
+    height: 93px !important;
+}
+
+.box {
+    padding: 20px 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    height: 180px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
 }

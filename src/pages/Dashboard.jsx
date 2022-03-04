@@ -44,6 +44,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     <div className="col-4 hide-md">
+                        
                         <SummaryBoxSpecial item={data.revenueSummary} />
                     </div>
                 </div>
