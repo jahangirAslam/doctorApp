@@ -3,6 +3,11 @@ import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import TimePicker from '@mui/lab/TimePicker';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import Stack from '@mui/material/Stack';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+
 
 const currencies = [
     {
@@ -37,7 +42,11 @@ const currencies = [
 
 const AddDoctor = () => {
     const [currency, setCurrency] = React.useState('EUR');
-        
+    const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
+
+    const handleChange = (newValue) => {
+        setValue(newValue);
+    };
     return (
 
         <div>
@@ -72,7 +81,7 @@ const AddDoctor = () => {
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Email" type="number" />
                     </Grid>
-                   
+
                     <Grid item lg={6} className="formEntries">
                         <TextField id="outlined-basic" label="Contact Number " variant="outlined" />
                     </Grid >
@@ -112,11 +121,34 @@ const AddDoctor = () => {
                     >
                         <Grid item lg={6}>
                             <h5 className='timeheader'>From</h5>
-                            
+
+
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                <Stack spacing={3}  className='timeInputs'>
+                                    <TimePicker
+                                        label="Time"
+                                        
+                                        value={value}
+                                        onChange={handleChange}
+                                        renderInput={(params) => <TextField {...params} />}
+                                    />
+                                </Stack>
+                            </LocalizationProvider>
                         </Grid>
                         <Grid item lg={6} >
                             <h5 className='timeheader'>To</h5>
-                            <input type="time" className='timeInputs' ></input>
+                            {/* <input type="time" className='timeInputs' ></input> */}
+                            <LocalizationProvider dateAdapter={AdapterDateFns}>
+                                <Stack spacing={3}  className='timeInputs' >
+                                    <TimePicker
+                                        label="Time"
+                                       
+                                        value={value}
+                                        onChange={handleChange}
+                                        renderInput={(params) => <TextField {...params} />}
+                                    />
+                                </Stack>
+                            </LocalizationProvider>
                         </Grid>
                     </Grid>
 

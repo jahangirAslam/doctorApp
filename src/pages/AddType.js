@@ -2,40 +2,24 @@ import React from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
 
 
-const currencies = [
+const doctor = [
     {
-        label: 'A',
+        label: 'Ahmad',
     },
     {
-        label: 'B',
+        label: 'Ali',
     },
     {
-        label: 'Ab',
+        label: 'Hassan',
     },
-    {
-        label: 'B-',
-    },
-    {
-        label: 'A-',
-    },
-    {
-        label: 'AB-',
-    },
-    {
-        label: 'O',
-    },
-    {
-        label: 'o-',
-    },
-
-
+  
 ];
 
 const AddType = () => {
-    const [currency, setCurrency] = React.useState('EUR');
+    const [doctors, setdoctors] = React.useState();
 
     const handleChange = (event) => {
-        setCurrency(event.target.value);
+        setdoctors(event.target.value);
     };
     return (
         <div>
@@ -69,10 +53,10 @@ const AddType = () => {
                             id="outlined-select-currency"
                             select
                             label="Doctor Select"
-                            value={currency}
+                            value={doctor}
                             onChange={handleChange}
                         >
-                            {currencies.map((option) => (
+                            {doctor.map((option) => (
                                 <MenuItem key={option.value} value={option.value}>
                                     {option.label}
                                 </MenuItem>

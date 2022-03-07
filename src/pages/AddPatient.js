@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import noimg from '../assets/images/noimg.png'
+import { useRef } from 'react';
 
 const genders = [
     {
@@ -49,10 +50,18 @@ const currencies = [
 ];
 
 const AddPatient = () => {
+    const [open, setOpen] = React.useState(true);
+
+    const handleClick = () => {
+      setOpen(!open);
+    };
+
+
     const [gender, setgender] = React.useState();
     const handleChanges = (event) => {
         setgender(event.target.value);
     };
+    const inputFile = useRef(null)
 
 
 
@@ -60,13 +69,21 @@ const AddPatient = () => {
     const [currency, setCurrency] = React.useState('EUR');
 
 
-    var loadFile = function(event) {
-        var image = document.getElementById('output');
-        image.src = URL.createObjectURL(event.target.files[0]);
-    };
+    // var loadFile = function(event) {
+    //     var image = document.getElementById('output');
+    //     image.src = URL.createObjectURL(event.target.files[0]);
+    // };
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
+
+    const selectImg = () => {
+        inputFile.current.click();
+
+    }
+
+
+
     return (
         <div>
             <Grid
@@ -131,12 +148,10 @@ const AddPatient = () => {
                         <TextField id="outlined-basic" label="Email" variant="outlined" />
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
-                        {/* <img onClick={selectImg} src={noimg} alt="" id="output" /> */}
-                        <div><input type="file" accept="image/*" name="image" id="file" onClick={loadFile()} style="display: none;"> </input></div>
-                        <div><label for="file" style="cursor: pointer;">Upload Image</label></div>
-                        <div><img id="output" width="200" /></div>
+                        <h5 className='img-drop'>Drop Your Profile Here</h5>
+                        <img onClick={selectImg} src={noimg} alt="" />
 
-
+                        <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} />
 
 
                     </Grid>

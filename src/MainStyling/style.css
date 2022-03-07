@@ -63,6 +63,7 @@ label {
     font-weight: 600;
     padding-left: 10px;
     color: black;
+    padding: 10px;
 }
 
 .timeInputs {
@@ -107,4 +108,15 @@ label {
     background-color: #fff;
     height: 180px;
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+}
+
+.img-drop {
+    color: black!important;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.logout-item {
+    color: white;
+    padding-left: 50px;
 }

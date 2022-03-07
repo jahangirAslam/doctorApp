@@ -34,7 +34,9 @@ const sidebarNav = [
         section: 'Doctors',
         icon: <i className='bx bx-cog'></i>,
         text: 'Doctors'
-    }
+    },
+
+  
 ]
 
 export default sidebarNav

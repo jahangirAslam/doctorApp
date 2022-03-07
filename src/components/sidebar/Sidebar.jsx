@@ -6,7 +6,7 @@ import sidebarNav from '../../configs/sidebarNav'
 import logod from '../../assets/images/logod.jpeg'
 
 
-const Sidebar = ({isUserFun}) => {
+const Sidebar = ({ isUserFun }) => {
     // isUserFun()
 
     const [activeIndex, setActiveIndex] = useState(0)
@@ -22,9 +22,9 @@ const Sidebar = ({isUserFun}) => {
     }, [location])
 
 
-  const logout = () =>{
-    isUserFun("logout")
-  }
+    const logout = () => {
+        isUserFun("logout")
+    }
 
 
     const closeSidebar = () => {
@@ -36,9 +36,9 @@ const Sidebar = ({isUserFun}) => {
     }
 
     return (
-        <div className='sidebar' style={{background: "dodgerblue"}}>
+        <div className='sidebar' style={{ background: "dodgerblue" }}>
             <div className="sidebar__logo">
-            <img src={logod} alt="img" width="200px" height="100px" />
+                <img src={logod} alt="img" width="200px" height="100px" />
                 <div className="sidebar-close" onClick={closeSidebar}>
                     <i className='bx bx-x'></i>
                 </div>
@@ -56,12 +56,13 @@ const Sidebar = ({isUserFun}) => {
                         </Link>
                     ))
                 }
-                   <div className="sidebar_menu_item">
+                <div onClick={logout} className="sidebar__menu__item">
                     <div className="sidebar__menu__item__icon">
-                        <i className='bx bx-log-out'></i>
+                    <i className='bx bx-log-out'></i>
+
                     </div>
-                    <div onClick={logout}  className="sidebar__menu__item__txt">
-                        Logout
+                    <div className="sidebar__menu__item__txt">
+                       Logout
                     </div>
                 </div>
             </div>
