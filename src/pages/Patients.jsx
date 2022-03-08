@@ -180,7 +180,7 @@ const Patients = () => {
                   {option.title}
                 </li>
               )}
-              style={{ width: 500 }}
+              style={{ width: 568 }}
               renderInput={(params) => (
                 <TextField {...params} label="Checkboxes" placeholder="Favorites" />
               )}
