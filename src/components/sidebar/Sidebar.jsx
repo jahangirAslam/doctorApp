@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { images } from '../../constants'
 import sidebarNav from '../../configs/sidebarNav'
 import logod from '../../assets/images/logod.jpeg'
+import { Grid } from '@mui/material'
 
 
 const Sidebar = ({ isUserFun }) => {
@@ -11,6 +12,8 @@ const Sidebar = ({ isUserFun }) => {
 
     const [activeIndex, setActiveIndex] = useState(0)
     const location = useLocation()
+    const [isLinkShow, setIsLinkShow] = useState(false);
+    const [linkShow, setLinkShow] = useState(false);
 
 
 
@@ -22,12 +25,16 @@ const Sidebar = ({ isUserFun }) => {
     }, [location])
 
 
+
+
     const logout = () => {
         isUserFun("logout")
     }
 
 
     const closeSidebar = () => {
+        setIsLinkShow(false)
+        setLinkShow(false);
         document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)'
         setTimeout(() => {
             document.body.classList.remove('sidebar-open')
@@ -56,13 +63,86 @@ const Sidebar = ({ isUserFun }) => {
                         </Link>
                     ))
                 }
+
+<div className="sidebar__menu__item" onMouseEnter={() => setIsLinkShow(true)} onMouseLeave={() => setIsLinkShow(false)} >
+                    <div className="sidebar__menu__item__icon">
+                        <i className='bx bx-receipt' ></i>
+                    </div>
+                    <Grid container direction="row" >
+
+                        {isLinkShow ?
+                            <div>
+                                <Grid item xs={12} className="sidebar__menu__item__txt">
+                                    <Link to='/patient' onClick={closeSidebar}  >
+                                        <p>Add Patient</p>
+                                    </Link>
+                                </Grid>
+                                <Grid item xs={12} className="sidebar__menu__item__txt">
+                                    <p>List Patient</p>
+                                </Grid>
+                            </div>
+                            :
+                            <Grid item xs={12} className="sidebar__menu__item__txt">
+                                Patient
+                            </Grid>}
+
+
+                    </Grid>
+
+                </div>
+
+
+                <div className="sidebar__menu__item" onMouseEnter={() => setLinkShow(true)} onMouseLeave={() => setLinkShow(false)}>
+
+                    <div className="sidebar__menu__item__icon">
+                        <i className='bx bx-home-alt'></i>
+                    </div>
+
+                    <Grid
+                        container direction="row" >
+                        {linkShow ?
+                            <div>
+
+                                <Grid item xs={12} className="sidebar__menu__item__txt"  >
+                                    <Link to='/doctor'  onClick={closeSidebar} >
+
+                                        <p>  Add Doctors </p>
+                                    </Link>
+                                </Grid>
+                                <Grid item xs={12} className="sidebar__menu__item__txt">
+                                    <Link to='/Doctors'  onClick={closeSidebar}  >
+                                        <p> List Doctors </p>
+                                    </Link>
+                                </Grid>
+                            </div>
+                            :
+
+                            <Grid item xs={12} className="sidebar__menu__item__txt">
+                                <p> Doctors </p>
+                            </Grid>
+                        }
+                    </Grid>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+                
                 <div onClick={logout} className="sidebar__menu__item">
                     <div className="sidebar__menu__item__icon">
-                    <i className='bx bx-log-out'></i>
+                        <i className='bx bx-log-out'></i>
 
                     </div>
                     <div className="sidebar__menu__item__txt">
-                       Logout
+                        Logout
                     </div>
                 </div>
             </div>
