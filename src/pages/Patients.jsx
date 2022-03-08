@@ -103,23 +103,23 @@ const Patients = () => {
         alignItems="center"
 
       >
-        <Grid item lg={12} className="patientFormHeading">
+        <Grid item lg={12} xs={12} className="patientFormHeading">
           <Typography style={{ color: "white", padding: "10px" }} variant='h4' align='left' >CREATE INVOICE</Typography>
         </Grid>
 
 
-        <Grid item lg={12} md={12}
+        <Grid item lg={12} xs={12} md={12}
           className="patientForm"
           container
           direction="row"
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item lg={12} className="patientFormHeading">
+          <Grid item lg={12} xs={12} className="patientFormHeading">
             <h1>Invoice Details</h1>
           </Grid>
 
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -128,7 +128,7 @@ const Patients = () => {
               renderInput={(params) => <TextField {...params} label="Patient" />}
             />
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -138,10 +138,10 @@ const Patients = () => {
             />
           </Grid>
 
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <TextField id="outlined-basic" label=" Doctor" variant="outlined" />
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -150,7 +150,7 @@ const Patients = () => {
               renderInput={(params) => <TextField {...params} label="Payment Mode" />}
             />
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -159,15 +159,16 @@ const Patients = () => {
               renderInput={(params) => <TextField {...params} label="Payment Status" />}
             />
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
        
           </Grid>
 
-          <Grid item lg={12} className="patientFormHeading">
+          <Grid item lg={12} xs={12} className="patientFormHeading">
             <h1>Invoice Summary</h1>
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
+              className='patient-entry-field'
               multiple
               id="checkboxes-tags-demo"
               options={top10Films}
@@ -185,7 +186,7 @@ const Patients = () => {
               )}
             />
           </Grid>
-          <Grid item lg={6} className="formEntries">
+          <Grid item lg={6} xs={12} className="formEntries">
        
        </Grid>
           <Grid

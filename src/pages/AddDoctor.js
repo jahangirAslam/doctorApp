@@ -69,35 +69,35 @@ const AddDoctor = () => {
                     justifyContent="center"
                     alignItems="center"
                 >
-                    <Grid item lg={12} className="patientFormHeading">
+                    <Grid item lg={12} xs={12} className="patientFormHeading">
                         <h1>Basic Information</h1>
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label=" FirstName" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label=" LastName" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Email" type="number" />
                     </Grid>
 
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Contact Number " variant="outlined" />
                     </Grid >
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Title *" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Fees" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Degree" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Experience" variant="outlined" />
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         <h4> Doctor available days </h4>
                         <FormGroup className='checkboxes'>
                             <FormControlLabel control={<Checkbox defaultChecked />} label="Sun" />
@@ -110,7 +110,7 @@ const AddDoctor = () => {
 
                         </FormGroup>
                     </Grid>
-                    <Grid item lg={6} className="formEntries">
+                    <Grid item lg={6} xs={12} className="formEntries">
                         {/* <input type="file" ></input> */}
 
                     </Grid>
@@ -119,7 +119,7 @@ const AddDoctor = () => {
                         direction="row"
                         justifyContent="flex-start"
                     >
-                        <Grid item lg={6}>
+                        <Grid item lg={6} xs={12}>
                             <h5 className='timeheader'>From</h5>
 
 
@@ -135,7 +135,7 @@ const AddDoctor = () => {
                                 </Stack>
                             </LocalizationProvider>
                         </Grid>
-                        <Grid item lg={6} >
+                        <Grid item lg={6} xs={12} >
                             <h5 className='timeheader'>To</h5>
                             {/* <input type="time" className='timeInputs' ></input> */}
                             <LocalizationProvider dateAdapter={AdapterDateFns}>

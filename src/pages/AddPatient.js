@@ -67,12 +67,6 @@ const AddPatient = () => {
 
 
     const [currency, setCurrency] = React.useState('EUR');
-
-
-    // var loadFile = function(event) {
-    //     var image = document.getElementById('output');
-    //     image.src = URL.createObjectURL(event.target.files[0]);
-    // };
     const handleChange = (event) => {
         setCurrency(event.target.value);
     };
@@ -142,7 +136,7 @@ const AddPatient = () => {
                         <TextField id="outlined-basic" label="phone" variant="outlined" />
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
-                        <TextField id="outlined-basic" label="Address" variant="outlined" />
+                        <TextField id="outlined-basic" label="Current Address" variant="outlined" />
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Email" variant="outlined" />

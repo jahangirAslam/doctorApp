@@ -73,6 +73,14 @@ label {
     margin: 10px;
 }
 
+@media only screen and (max-width: 750px) {
+    .timeInputs {
+        width: 320px!important;
+        padding-left: 0;
+        margin: 0;
+    }
+}
+
 .main__content {
     padding-top: 0px !important;
 }
@@ -119,4 +127,10 @@ label {
 .logout-item {
     color: white;
     padding-left: 50px;
+}
+
+@media only screen and (max-width: 750px) {
+    .patient-entry-field {
+        width: 320px!important;
+    }
 }
