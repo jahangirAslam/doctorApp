@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,8 +7,7 @@ import TimePicker from '@mui/lab/TimePicker';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import Stack from '@mui/material/Stack';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
-
-
+import noimg from '../assets/images/noimg.png'
 const currencies = [
     {
         label: 'A',
@@ -43,13 +42,22 @@ const currencies = [
 const AddDoctor = () => {
     const [currency, setCurrency] = React.useState('EUR');
     const [value, setValue] = React.useState(new Date('2014-08-18T21:11:54'));
-
+    const inputFile = useRef(null);
     const handleChange = (newValue) => {
         setValue(newValue);
     };
+
+    const selectImg = () => {
+        inputFile.current.click();
+
+    }
+
+
     return (
 
         <div>
+            <Button className='backBtn'> Back To Doctor List</Button>
+
             <Grid
                 container
                 direction="row"
@@ -111,7 +119,10 @@ const AddDoctor = () => {
                         </FormGroup>
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
-                        {/* <input type="file" ></input> */}
+                    <h5 className='img-drop'>Drop Your Profile Here</h5>
+                        <img onClick={selectImg} src={noimg} alt="" />
+                        <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} />
+
 
                     </Grid>
                     <Grid

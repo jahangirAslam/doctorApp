@@ -6,7 +6,7 @@ import DoctorProfile from './DoctorProfile';
 import { Link } from 'react-router-dom';
 
 
-const Doctors = () => {
+const ListType = () => {
   const[triggreBtn,setTriggreBtn]=useState();
   const activeBtn=(data)=>{
     setTriggreBtn(data)
@@ -14,7 +14,7 @@ const Doctors = () => {
   return (
     <div>
       <Grid item lg={12}>
-        <h2 className='listHeading'>Doctor List</h2>
+        <h2 className='listHeading'> List Type</h2>
       </Grid>
       <Grid 
         container
@@ -137,4 +137,4 @@ const Doctors = () => {
        
     );
 }
-    export default Doctors;
+    export default ListType;

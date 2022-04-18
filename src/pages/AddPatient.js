@@ -22,19 +22,19 @@ const genders = [
 
 const currencies = [
     {
-        label: 'A',
+        label: 'A+',
     },
     {
-        label: 'B',
+        label: 'A-',
     },
     {
-        label: 'Ab',
+        label: 'B+',
     },
     {
         label: 'B-',
     },
     {
-        label: 'A-',
+        label: 'AB+',
     },
     {
         label: 'AB-',
@@ -80,6 +80,7 @@ const AddPatient = () => {
 
     return (
         <div>
+            <Button className='backBtn'> Back To Patient List</Button>
             <Grid
                 container
                 direction="row"
@@ -129,9 +130,9 @@ const AddPatient = () => {
                     <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="weight" variant="outlined" />
                     </Grid >
-                    <Grid item lg={6} xs={12} className="formEntries">
+                    {/* <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="Allergy" variant="outlined" />
-                    </Grid>
+                    </Grid> */}
                     <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label="phone" variant="outlined" />
                     </Grid>
@@ -144,7 +145,6 @@ const AddPatient = () => {
                     <Grid item lg={6} xs={12} className="formEntries">
                         <h5 className='img-drop'>Drop Your Profile Here</h5>
                         <img onClick={selectImg} src={noimg} alt="" />
-
                         <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} />
 
 

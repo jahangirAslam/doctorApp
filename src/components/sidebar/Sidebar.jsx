@@ -14,6 +14,8 @@ const Sidebar = ({ isUserFun }) => {
     const location = useLocation()
     const [isLinkShow, setIsLinkShow] = useState(false);
     const [linkShow, setLinkShow] = useState(false);
+    const [show, setShow] = useState(false);
+
 
 
 
@@ -43,7 +45,7 @@ const Sidebar = ({ isUserFun }) => {
     }
 
     return (
-        <div className='sidebar' style={{ background: "dodgerblue" }}>
+        <div className='sidebar' style={{ background: "dodgerblue",width:"330px" }}>
             <div className="sidebar__logo">
                 <img src={logod} alt="img" width="200px" height="100px" />
                 <div className="sidebar-close" onClick={closeSidebar}>
@@ -64,25 +66,27 @@ const Sidebar = ({ isUserFun }) => {
                     ))
                 }
 
-<div className="sidebar__menu__item" onMouseEnter={() => setIsLinkShow(true)} onMouseLeave={() => setIsLinkShow(false)} >
-                    <div className="sidebar__menu__item__icon">
-                        <i className='bx bx-receipt' ></i>
+<div className="sidebar__menu__item" onClick={() => setIsLinkShow(true)} onMouseLeave={() => setIsLinkShow(false)} >
+                    <div className="sidebar__menu__item__icon sidebar__menu__item__icons">
+                        {/* <i className='bx bx-receipt' ></i> */}
                     </div>
                     <Grid container direction="row" >
 
                         {isLinkShow ?
-                            <div>
+                            <div className='onClickStyle'>
                                 <Grid item xs={12} className="sidebar__menu__item__txt">
                                     <Link to='/patient' onClick={closeSidebar}  >
                                         <p>Add Patient</p>
                                     </Link>
                                 </Grid>
                                 <Grid item xs={12} className="sidebar__menu__item__txt">
+                                    <Link to='/patientList'  onClick={closeSidebar}>
                                     <p>List Patient</p>
+                                    </Link>
                                 </Grid>
                             </div>
                             :
-                            <Grid item xs={12} className="sidebar__menu__item__txt">
+                            <Grid item xs={12} className="sidebar__menu__item__txt patient-hover">
                                 Patient
                             </Grid>}
 
@@ -90,20 +94,20 @@ const Sidebar = ({ isUserFun }) => {
                     </Grid>
 
                 </div>
+{/*------------------------------------- Doctors */}
 
+                <div className="sidebar__menu__item" onClick={() => setLinkShow(true)} onMouseLeave={() => setLinkShow(false)}>
 
-                <div className="sidebar__menu__item" onMouseEnter={() => setLinkShow(true)} onMouseLeave={() => setLinkShow(false)}>
-
-                    <div className="sidebar__menu__item__icon">
-                        <i className='bx bx-home-alt'></i>
+                    <div className="sidebar__menu__item__icon sidebar__menu__item__icons">
+                        {/* <i className='bx bx-home-alt'></i> */}
                     </div>
 
                     <Grid
                         container direction="row" >
                         {linkShow ?
-                            <div>
+                            <div className='onClickStyle'>
 
-                                <Grid item xs={12} className="sidebar__menu__item__txt"  >
+                                <Grid item xs={12} className="sidebar__menu__item__txt "  >
                                     <Link to='/doctor'  onClick={closeSidebar} >
 
                                         <p>  Add Doctors </p>
@@ -117,7 +121,7 @@ const Sidebar = ({ isUserFun }) => {
                             </div>
                             :
 
-                            <Grid item xs={12} className="sidebar__menu__item__txt">
+                            <Grid item xs={12} className="sidebar__menu__item__txt patient-hover">
                                 <p> Doctors </p>
                             </Grid>
                         }
@@ -127,6 +131,45 @@ const Sidebar = ({ isUserFun }) => {
 
 
                 </div>
+{/*------------------------------------- Type List */}
+
+
+                <div className="sidebar__menu__item" onClick={() => setShow(true)} onMouseLeave={() => setShow(false)}>
+
+                    <div className="sidebar__menu__item__icon sidebar__menu__item__icons">
+                        {/* <i className='bx bx-home-alt'></i> */}
+                    </div>
+
+                    <Grid
+                        container direction="row" >
+                        {show ?
+                            <div className='onClickStyle'>
+
+                                <Grid item xs={12} className="sidebar__menu__item__txt "  >
+                                    <Link to='/type'  onClick={closeSidebar} >
+
+                                        <p>  Add Type </p>
+                                    </Link>
+                                </Grid>
+                                <Grid item xs={12} className="sidebar__menu__item__txt">
+                                    <Link to='/listType'  onClick={closeSidebar}  >
+                                        <p> List Type </p>
+                                    </Link>
+                                </Grid>
+                            </div>
+                            :
+
+                            <Grid item xs={12} className="sidebar__menu__item__txt patient-hover">
+                                <p> Type </p>
+                            </Grid>
+                        }
+                    </Grid>
+
+
+
+
+                </div>
+
 
 
 

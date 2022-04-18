@@ -5,7 +5,8 @@
     /* font-style: italic; */
     font-weight: 900;
     cursor: pointer;
-    background: dodgerblue
+    background: dodgerblue;
+    font-size: 23px;
 }
 
 .patientFormHeading h1 {
@@ -133,4 +134,227 @@ label {
     .patient-entry-field {
         width: 320px!important;
     }
+}
+
+.summary-box {
+    color: black!important;
+}
+
+.main__content {
+    padding: 10px !important;
+}
+
+.onClickStyle {
+    background-color: white!important;
+    padding: 20px;
+    height: 100PX!important;
+    border-radius: 9px;
+}
+
+.backBtn {
+    background-color: dodgerblue!important;
+    padding: 6px!important;
+    color: white!important;
+    font-size: 18px!important;
+    margin-bottom: 4px!important;
+    border-radius: 12px;
+}
+
+.addBtn {
+    background-color: dodgerblue!important;
+    padding: 6px!important;
+    color: white!important;
+    font-size: 18px!important;
+    margin-bottom: 4px!important;
+    border-radius: 12px;
+}
+
+.patient-hover:hover {
+    cursor: pointer!important;
+}
+
+.list {
+    color: black!important;
+}
+
+.css-okt5j6-MuiDataGrid-columnHeaders {
+    color: white!important;
+    background-color: black !important;
+    font-size: 18px;
+}
+
+.css-18lolh3-MuiDataGrid-root .MuiDataGrid-cell--textLeft {}
+
+.doctorProfileHeader {
+    background-color: #d4dbf9;
+}
+
+.profile {
+    color: black;
+    font-weight: 800;
+    padding: 6px;
+}
+
+.profile-img {
+    color: blue;
+    font-weight: 800;
+    padding: 6px;
+}
+
+.doctorProfile img {
+    position: relative;
+    top: 20px;
+    left: 0px;
+    padding-left: 10px;
+}
+
+.profileLogin {
+    padding-left: 12px;
+    color: black;
+}
+
+.doctorProfile {
+    background-color: white;
+    /* margin-top: 14px; */
+}
+
+.doctorProfile h6 {
+    color: black;
+    padding-left: 10px;
+    font-weight: 800;
+    position: relative!important;
+    top: 10px!important;
+    margin-top: 16px!important;
+    font-size: 17px!important;
+    margin-bottom: 14px!important;
+}
+
+.profilebtns {
+    text-align: center;
+    padding-bottom: 12px;
+}
+
+.profilebtn {
+    background-color: #3452e1!important;
+    color: white!important;
+}
+
+.personal-information {
+    background-color: white;
+    margin-top: 30px!important;
+    padding-top: 12px;
+    margin-bottom: 30px!important;
+    padding-bottom: 12px;
+}
+
+.information {
+    color: black;
+    padding: 10px;
+}
+
+.profileStatus {
+    background-color: white;
+    padding: 8px;
+}
+
+.profileHeading {
+    font-size: 18px!important;
+    color: black;
+}
+
+.profileIcons {
+    color: blue;
+    padding: 5px;
+}
+
+.profileBill {
+    color: black;
+}
+
+.profileBtn {
+    padding-top: 6px;
+    margin-top: 12px!important;
+    background-color: #fff;
+}
+
+.appoinmentData {
+    color: black;
+    padding: 6px;
+}
+
+.listHeading {
+    color: black;
+    font-weight: 700;
+}
+
+.listBtn {
+    background-color: blue!important;
+    font-size: 18px!important;
+    color: white!important;
+}
+
+.listTable {
+    background-color: white;
+    padding: 20px;
+}
+
+.listValueWrapper {
+    border: 1px solid black;
+    margin-top: 12px;
+}
+
+.listValueWrapperData {
+    border: 1px solid black;
+}
+
+.listData {
+    color: black;
+    font-weight: 900;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.listValue {
+    color: black;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.btnGroup {
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.viewbtn {
+    background: #3452e1!important;
+    padding: 5px!important;
+    margin: 3px!important;
+}
+
+.viewbtn :hover {
+    background: white!important;
+}
+
+.editbtn {
+    background: green!important;
+    padding: 5px!important;
+    margin: 3px!important;
+}
+
+.editbtn :hover {
+    background: white!important;
+}
+
+.deletebtn {
+    background: red!important;
+    padding: 5px!important;
+    margin: 3px!important;
+}
+
+.deletebtn :hover {
+    background: white!important;
+}
+
+.sidebar__menu__item__icons {
+    margin-left: 5px!important;
 }

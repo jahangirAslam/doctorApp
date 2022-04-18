@@ -56,36 +56,43 @@ const top10Films = [
 
 
 
-const top100Films = [{ label: 'Reservoir Dogs', year: 1992 },
-{ label: 'Braveheart', year: 1995 },
-{ label: 'M', year: 1931 },
-{ label: 'Requiem for a Dream', year: 2000 },
-{ label: 'Amélie', year: 2001 },
-{ label: 'A Clockwork Orange', year: 1971 },
-{ label: 'Like Stars on Earth', year: 2007 },
-{ label: 'Taxi Driver', year: 1976 },
-{ label: 'Lawrence of Arabia', year: 1962 },
-{ label: 'Double Indemnity', year: 1944 },
-{
-  label: 'Eternal Sunshine of the Spotless Mind',
-  year: 2004,
-},
-{ label: 'Amadeus', year: 1984 },
-{ label: 'To Kill a Mockingbird', year: 1962 },
-{ label: 'Toy Story 3', year: 2010 },
-{ label: 'Logan', year: 2017 },
-{ label: 'Full Metal Jacket', year: 1987 },
-{ label: 'Dangal', year: 2016 },
-{ label: 'The Sting', year: 1973 },
-{ label: '2001: A Space Odyssey', year: 1968 },
-{ label: "Singin' in the Rain", year: 1952 },
-{ label: 'Toy Story', year: 1995 },
-{ label: 'Bicycle Thieves', year: 1948 },
-{ label: 'The Kid', year: 1921 },
-{ label: 'Inglourious Basterds', year: 2009 },
-{ label: 'Snatch', year: 2000 },
-{ label: '3 Idiots', year: 2009 },
-{ label: 'Monty Python and the Holy Grail', year: 1975 },
+const top100Films = [{ label: 'Online' },
+{ label: 'Cash' },
+// { label: 'M', year: 1931 },
+// { label: 'Requiem for a Dream', year: 2000 },
+// { label: 'Amélie', year: 2001 },
+// { label: 'A Clockwork Orange', year: 1971 },
+// { label: 'Like Stars on Earth', year: 2007 },
+// { label: 'Taxi Driver', year: 1976 },
+// { label: 'Lawrence of Arabia', year: 1962 },
+// { label: 'Double Indemnity', year: 1944 },
+// {
+//   label: 'Eternal Sunshine of the Spotless Mind',
+//   year: 2004,
+// },
+// { label: 'Amadeus', year: 1984 },
+// { label: 'To Kill a Mockingbird', year: 1962 },
+// { label: 'Toy Story 3', year: 2010 },
+// { label: 'Logan', year: 2017 },
+// { label: 'Full Metal Jacket', year: 1987 },
+// { label: 'Dangal', year: 2016 },
+// { label: 'The Sting', year: 1973 },
+// { label: '2001: A Space Odyssey', year: 1968 },
+// { label: "Singin' in the Rain", year: 1952 },
+// { label: 'Toy Story', year: 1995 },
+// { label: 'Bicycle Thieves', year: 1948 },
+// { label: 'The Kid', year: 1921 },
+// { label: 'Inglourious Basterds', year: 2009 },
+// { label: 'Snatch', year: 2000 },
+// { label: '3 Idiots', year: 2009 },
+// { label: 'Monty Python and the Holy Grail', year: 1975 },
+]
+
+const patient = [{ label: 'Ali' },
+{ label: 'Ahmad' },
+{ label: 'Hassan' },
+{ label: 'Jahangir' },
+
 ]
 
 const Patients = () => {
@@ -96,6 +103,7 @@ const Patients = () => {
   };
   return (
     <div>
+       <Button className='backBtn'> Back To Patient Entry List</Button>
       <Grid
         container
         direction="row"
@@ -123,12 +131,12 @@ const Patients = () => {
             <Autocomplete
               disablePortal
               id="combo-box-demo"
-              options={top100Films}
+              options={patient}
               sx={{ width: "100%" }}
               renderInput={(params) => <TextField {...params} label="Patient" />}
             />
           </Grid>
-          <Grid item lg={6} xs={12} className="formEntries">
+          {/* <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -136,7 +144,7 @@ const Patients = () => {
               sx={{ width: "100%" }}
               renderInput={(params) => <TextField {...params} label="Appointment" />}
             />
-          </Grid>
+          </Grid> */}
 
           <Grid item lg={6} xs={12} className="formEntries">
             <TextField id="outlined-basic" label=" Doctor" variant="outlined" />
@@ -150,7 +158,7 @@ const Patients = () => {
               renderInput={(params) => <TextField {...params} label="Payment Mode" />}
             />
           </Grid>
-          <Grid item lg={6} xs={12} className="formEntries">
+          {/* <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
@@ -158,7 +166,7 @@ const Patients = () => {
               sx={{ width: "100%" }}
               renderInput={(params) => <TextField {...params} label="Payment Status" />}
             />
-          </Grid>
+          </Grid> */}
           <Grid item lg={6} xs={12} className="formEntries">
        
           </Grid>
