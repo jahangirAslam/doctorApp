@@ -358,3 +358,10 @@ label {
 .sidebar__menu__item__icons {
     margin-left: 5px!important;
 }
+
+.dropdownmenuText {
+    color: white!important;
+    text-align: center!important;
+    font-weight: 800!important;
+    width: 330px!important;
+}

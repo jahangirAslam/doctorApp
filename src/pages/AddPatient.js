@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
 import noimg from '../assets/images/noimg.png'
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const genders = [
     {
@@ -80,7 +81,11 @@ const AddPatient = () => {
 
     return (
         <div>
-            <Button className='backBtn'> Back To Patient List</Button>
+            <Button className='backBtn'>
+                <Link to='/PatientList'>
+                               <p>  Back To Patient List</p>
+                               </Link>
+                </Button>
             <Grid
                 container
                 direction="row"

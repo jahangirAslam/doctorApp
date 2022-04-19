@@ -8,6 +8,7 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import Stack from '@mui/material/Stack';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import noimg from '../assets/images/noimg.png'
+import { Link } from 'react-router-dom';
 const currencies = [
     {
         label: 'A',
@@ -56,7 +57,11 @@ const AddDoctor = () => {
     return (
 
         <div>
-            <Button className='backBtn'> Back To Doctor List</Button>
+            <Button className='backBtn'>
+                <Link to='/Doctors'  >
+                    <p> Back To Doctor List </p>
+                </Link>
+            </Button>
 
             <Grid
                 container
@@ -119,7 +124,7 @@ const AddDoctor = () => {
                         </FormGroup>
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
-                    <h5 className='img-drop'>Drop Your Profile Here</h5>
+                        <h5 className='img-drop'>Drop Your Profile Here</h5>
                         <img onClick={selectImg} src={noimg} alt="" />
                         <input type='file' id='file' ref={inputFile} style={{ display: 'none' }} />
 
@@ -135,10 +140,10 @@ const AddDoctor = () => {
 
 
                             <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <Stack spacing={3}  className='timeInputs'>
+                                <Stack spacing={3} className='timeInputs'>
                                     <TimePicker
                                         label="Time"
-                                        
+
                                         value={value}
                                         onChange={handleChange}
                                         renderInput={(params) => <TextField {...params} />}
@@ -150,10 +155,10 @@ const AddDoctor = () => {
                             <h5 className='timeheader'>To</h5>
                             {/* <input type="time" className='timeInputs' ></input> */}
                             <LocalizationProvider dateAdapter={AdapterDateFns}>
-                                <Stack spacing={3}  className='timeInputs' >
+                                <Stack spacing={3} className='timeInputs' >
                                     <TimePicker
                                         label="Time"
-                                       
+
                                         value={value}
                                         onChange={handleChange}
                                         renderInput={(params) => <TextField {...params} />}

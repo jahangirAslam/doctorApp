@@ -27,7 +27,7 @@ const ListType = () => {
           <Grid 
             item lg={12}
             >
-              <Button className='listBtn'>+ New Doctor</Button>
+              <Button className='listBtn'>+ New Type</Button>
             </Grid>
 
 
@@ -37,31 +37,23 @@ const ListType = () => {
             className='listValueWrapper'
             >
             <Grid 
-            item lg={1}
+            item lg={2}
             >
                 <p className='listData'>Sr.No</p>
             </Grid>
-            <Grid 
-            item lg={2}
-            >
-                <p className='listData'>Title</p>
-            </Grid>
+           
             
             <Grid 
-            item lg={2}
+            item lg={3}
             >
                 <p className='listData'>Name</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={3}
             >
-                <p className='listData'>Contact Number</p>
+                <p className='listData'>Price</p>
             </Grid>
-            <Grid 
-            item lg={2}
-            >
-                <p className='listData'>Email</p>
-            </Grid>
+           
             <Grid 
             item lg={3}
             >
@@ -75,41 +67,33 @@ const ListType = () => {
             className='listValueWrapperData'
             >
             <Grid 
-            item lg={1}
+            item lg={2}
             >
                 <p className='listValue'>1</p>
             </Grid>
-            <Grid 
-            item lg={2}
-            >
-                <p className='listValue'>ABS</p>
-            </Grid>
+          
             
             <Grid 
-            item lg={2}
+            item lg={3}
             >
                 <p className='listValue'>Ali</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={3}
             >
-                <p className='listValue'>03036619660</p>
+                <p className='listValue'>321</p>
             </Grid>
-            <Grid 
-            item lg={2}
-            >
-                <p className='listValue'>@egjfejkbfejk</p>
-            </Grid>
+            
             <Grid
             item lg={3}
           >
             <ButtonGroup className='btnGroup' variant="outlined" aria-label="outlined button group">
-            <Button className='viewbtn'>
+            {/* <Button className='viewbtn'>
               <Link to='/doctorProfile' >
              
                  view
                  </Link>
-              </Button>              
+              </Button>               */}
               <Button className='editbtn'>
               <Link to='/doctorProfile' >
              

@@ -1,10 +1,16 @@
 import React from 'react'
 import { Button, Grid, MenuItem, TextField, Typography } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 const AddType = () => {
     return (
         <div>
-             <Button className='backBtn'> Back To Type List</Button>
+            <Button className='backBtn'>
+                <Link to='/ListType'> 
+                 <p>Back To Type List</p>
+                </Link>
+
+            </Button>
             <Grid
                 container
                 direction="row"
@@ -28,28 +34,28 @@ const AddType = () => {
                         <h1>Basic Information</h1>
                     </Grid>
                     <Grid item lg={6} xs={12} className="formEntries">
-                        <TextField  label=" Name" variant="outlined" />
+                        <TextField label=" Name" variant="outlined" />
                     </Grid>
-                    
+
                     <Grid item lg={6} xs={12} className="formEntries">
                         <TextField id="outlined-basic" label=" Price" variant="outlined" />
                     </Grid>
-                   
+
                     <Grid
-                    container
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                    item xs={12} 
-                    className="Submitbtn "
-                      > 
-                    <Button>Submit</Button> 
+                        container
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        item xs={12}
+                        className="Submitbtn "
+                    >
+                        <Button>Submit</Button>
                     </Grid>
-                  
-                    
-                </Grid> 
-              
-               
+
+
+                </Grid>
+
+
             </Grid>
         </div>
     )

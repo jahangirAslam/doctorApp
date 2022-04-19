@@ -2,6 +2,7 @@ import React from 'react'
 import { Autocomplete, Button, Grid, MenuItem, Typography } from '@mui/material'
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
+import { Link } from 'react-router-dom';
 
 
 const top10Films = [
@@ -94,6 +95,12 @@ const patient = [{ label: 'Ali' },
 { label: 'Jahangir' },
 
 ]
+const doctors = [{ label: 'Ali' },
+{ label: 'Ahmad' },
+{ label: 'Hassan' },
+{ label: 'Jahangir' },
+
+]
 
 const Patients = () => {
   const [currency, setCurrency] = React.useState('EUR');
@@ -103,7 +110,11 @@ const Patients = () => {
   };
   return (
     <div>
-       <Button className='backBtn'> Back To Patient Entry List</Button>
+       <Button className='backBtn'> 
+       <Link to='/report'>
+       <p> Back To Patient Entry List</p>
+       </Link>
+       </Button>
       <Grid
         container
         direction="row"
@@ -136,18 +147,16 @@ const Patients = () => {
               renderInput={(params) => <TextField {...params} label="Patient" />}
             />
           </Grid>
-          {/* <Grid item lg={6} xs={12} className="formEntries">
+         
+
+          <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
               disablePortal
               id="combo-box-demo"
-              options={top100Films}
+              options={doctors}
               sx={{ width: "100%" }}
-              renderInput={(params) => <TextField {...params} label="Appointment" />}
+              renderInput={(params) => <TextField {...params} label="Doctors" />}
             />
-          </Grid> */}
-
-          <Grid item lg={6} xs={12} className="formEntries">
-            <TextField id="outlined-basic" label=" Doctor" variant="outlined" />
           </Grid>
           <Grid item lg={6} xs={12} className="formEntries">
             <Autocomplete
