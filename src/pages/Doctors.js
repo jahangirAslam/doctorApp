@@ -13,7 +13,7 @@ const Doctors = () => {
   }
   return (
     <div>
-      <Grid item lg={12}>
+      <Grid item lg={12} xs={12}>
         <h2 className='listHeading'>Doctor List</h2>
       </Grid>
       <Grid 
@@ -25,9 +25,14 @@ const Doctors = () => {
         className='listTable'
         >
           <Grid 
-            item lg={12}
+            item lg={12} xs={12}
             >
-              <Button className='listBtn'>+ New Doctor</Button>
+              <Button className='listBtn'>
+                <Link to='/doctor'>
+                <p>+ New Doctor</p>
+                </Link>
+                
+              </Button>
             </Grid>
 
 
@@ -37,33 +42,33 @@ const Doctors = () => {
             className='listValueWrapper'
             >
             <Grid 
-            item lg={1}
+            item lg={1} xs={12}
             >
                 <p className='listData'>Sr.No</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listData'>Title</p>
             </Grid>
             
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listData'>Name</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listData'>Contact Number</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listData'>Email</p>
             </Grid>
             <Grid 
-            item lg={3}
+            item lg={3} xs={12}
             >
                 <p className='listData'>Option</p>
             </Grid>
@@ -75,33 +80,33 @@ const Doctors = () => {
             className='listValueWrapperData'
             >
             <Grid 
-            item lg={1}
+            item lg={1} xs={12}
             >
                 <p className='listValue'>1</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listValue'>ABS</p>
             </Grid>
             
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listValue'>Ali</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listValue'>03036619660</p>
             </Grid>
             <Grid 
-            item lg={2}
+            item lg={2} xs={12}
             >
                 <p className='listValue'>@egjfejkbfejk</p>
             </Grid>
             <Grid
-            item lg={3}
+            item lg={3} xs={12}
           >
             <ButtonGroup className='btnGroup' variant="outlined" aria-label="outlined button group">
             <Button className='viewbtn'>

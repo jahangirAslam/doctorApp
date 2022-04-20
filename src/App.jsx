@@ -26,6 +26,7 @@ import PatientPrescriptionTable from './pages/PatientPrescriptionTable'
 import PatientInvoice from './pages/PatientInvoice'
 import PatientMedicalTable from './pages/patientMedicalTable'
 import ListType from './pages/ListType'
+import Bill from './pages/Bill'
 
 
 function App() {
@@ -83,6 +84,8 @@ function App() {
                         <Route path='patientPrescriptionTable' element={<PatientPrescriptionTable/>}/>
                         <Route path='patientInvoice' element={<PatientInvoice/>}/>
                         <Route path='patientMedicalTable' element={<PatientMedicalTable/>}/>
+                        <Route path='bill' element={<Bill/>}/>
+
 
 
 

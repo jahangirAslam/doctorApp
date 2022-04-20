@@ -319,7 +319,7 @@ const Sidebar = ({ isUserFun }) => {
                                         <ListItemText className='dropdownmenuText' >
                                             <Link to='/patient-entry'  >
 
-                                                <p> Patient Entry </p>
+                                                <p> Create Invoice </p>
                                             </Link>
 
                                         </ListItemText>
@@ -333,7 +333,7 @@ const Sidebar = ({ isUserFun }) => {
                             </ListItemIcon> */}
                                         <ListItemText className='dropdownmenuText' >
                                         <Link to='/report'  >
-                                        <p> Invoice </p>
+                                        <p> Invoice List </p>
                                     </Link>
 
                                         </ListItemText>

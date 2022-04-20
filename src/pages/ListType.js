@@ -27,7 +27,11 @@ const ListType = () => {
           <Grid 
             item lg={12}
             >
-              <Button className='listBtn'>+ New Type</Button>
+              <Button className='listBtn'>
+                <Link to='/type'>
+                  <p>+ New Type</p>
+                </Link>
+              </Button>
             </Grid>
 
 

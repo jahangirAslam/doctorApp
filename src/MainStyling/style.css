@@ -365,3 +365,51 @@ label {
     font-weight: 800!important;
     width: 330px!important;
 }
+
+.invoiceHeader {
+    margin-top: 8px;
+    color: black;
+    text-align: center;
+    padding: 6px;
+}
+
+.invoiceSummary {
+    color: black;
+    padding: 6px;
+    background-color: white;
+}
+
+.invoceDetail {
+    color: black;
+    padding: 4px;
+    text-align: center;
+}
+
+.invoceData {
+    color: black;
+    padding: 4px;
+    text-align: center;
+}
+
+.summaryAmount {
+    text-align: end!important;
+}
+
+.summaryTable {
+    background-color: white;
+}
+
+.details {
+    background-color: white;
+    padding: 6px;
+}
+
+.icons {
+    text-align: start!important;
+}
+
+.printIcons {
+    color: blue!important;
+    text-align: center;
+    cursor: pointer;
+}

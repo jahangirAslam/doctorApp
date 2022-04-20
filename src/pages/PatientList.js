@@ -25,7 +25,11 @@ const PatientList = () => {
         <Grid
           item lg={12}
         >
-          <Button className='listBtn'>+ New Patient</Button>
+          <Button className='listBtn'>
+            <Link to='/patient'>
+              <p>+ New Patient</p>
+            </Link>
+          </Button>
         </Grid>
 
 

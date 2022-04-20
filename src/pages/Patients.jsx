@@ -3,6 +3,7 @@ import { Autocomplete, Button, Grid, MenuItem, Typography } from '@mui/material'
 import Checkbox from '@mui/material/Checkbox';
 import TextField from '@mui/material/TextField';
 import { Link } from 'react-router-dom';
+import Bill from './Bill';
 
 
 const top10Films = [
@@ -112,7 +113,7 @@ const Patients = () => {
     <div>
        <Button className='backBtn'> 
        <Link to='/report'>
-       <p> Back To Patient Entry List</p>
+       <p> Back To Create Invoice List</p>
        </Link>
        </Button>
       <Grid
@@ -222,6 +223,7 @@ const Patients = () => {
 
 
       </Grid>
+      <Bill/>
     </div>
   )
 }
